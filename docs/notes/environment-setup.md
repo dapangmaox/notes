@@ -10,7 +10,7 @@
 wget http://nginx.org/download/nginx-1.23.0.tar.gz
 ```
 
-下载完成之后在 `/usr/local/` 下创建nginx文件夹并进入：
+下载完成之后在 `/usr/local/` 下创建 nginx 文件夹并进入：
 
 ```bash
 cd /usr/local/
