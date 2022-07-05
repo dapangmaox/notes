@@ -39,7 +39,7 @@ yum -y install openssl openssl-devel
 
 ```bash
 cd nginx-1.23.0/
-./configure
+./configure --with-http_ssl_module
 make && make install
 ```
 

@@ -1,3 +1,40 @@
+## IDEA自带Maven
+
+IntelliJ IDEA 是自带 maven 和 gradle 的，路径在：
+
+```bash
+/Applications/IntelliJ IDEA CE.app/Contents/plugins/maven/lib
+/Applications/IntelliJ IDEA CE.app/Contents/plugins/gradle/lib
+```
+
+## Mac OS 设置默认 Java JDK
+
+首先 `/usr/libexec/java_home -V`，会列出所有安装的 JDK，之后选择想要的默认 JDK，设置 JAVA_HOME
+
+```bash
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6.0_65-b14-462`
+```
+
+<img src="https://notes-1312649150.cos.ap-shanghai.myqcloud.com/images/%E6%88%AA%E5%B1%8F2022-06-29%2023.05.31.png" alt="截屏2022-06-29 23.05.31" style="zoom:50%;" />
+
+## html2pdf + JSZip + file-saver
+
+最近遇到了一个需求：需要在前端生成多个 PDF，并打包成 zip 包给到用户。
+
+解决方案：使用 `html2pdf` + `JSZip` + `file-saver` 
+
+```javascript
+// 核心代码
+html2pdf().set(option).from(element).toPdf().output().then(function(pdfContent) {
+  const zip = new JSZip();
+  zip.file('filename1', pdfContent, { binary: true });
+  zip.file('filename2', pdfContent, { binary: true });
+  zip.generateAsync{ type: 'blob' }).then(function(content) {
+    FileSaver.saveAs(content, 'download.zip');
+  })
+})
+```
+
 ## 查看 CentOS 系统版本
 
 ```bash
