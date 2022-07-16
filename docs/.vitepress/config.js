@@ -6,6 +6,7 @@ export default {
     sidebar: {
       '/notes/': sidebarNotes(),
       '/posts/': sidebarPosts(),
+      '/typescript/': sidebarTypeScript(),
     },
   },
 };
@@ -14,6 +15,7 @@ function nav() {
   return [
     { text: 'Notes', link: '/notes/linux' },
     { text: 'Blog', link: '/posts/eslint' },
+    { text: 'TypeScript', link: '/typescript/basic' },
   ];
 }
 
@@ -69,6 +71,47 @@ function sidebarPosts() {
         {
           text: '使用ESLint和Prettier配置Angular项目',
           link: '/posts/Angular/angular-eslint-prettier',
+        },
+      ],
+    },
+  ];
+}
+
+function sidebarTypeScript() {
+  return [
+    {
+      items: [
+        {
+          text: '类型收窄',
+          link: '/typescript/narrowing',
+        },
+        {
+          text: '函数',
+          link: '/typescript/functions',
+        },
+        {
+          text: '对象类型',
+          link: '/typescript/object-types',
+        },
+        {
+          text: 'keyof 和 typeof',
+          link: '/typescript/keyof-typeof',
+        },
+        {
+          text: '索引访问类型',
+          link: '/typescript/indexed-access-types',
+        },
+        {
+          text: '条件类型',
+          link: '/typescript/conditional-types',
+        },
+        {
+          text: '映射类型',
+          link: '/typescript/mapped-types',
+        },
+        {
+          text: '模板字符串类型',
+          link: '/typescript/template-literal-types',
         },
       ],
     },
