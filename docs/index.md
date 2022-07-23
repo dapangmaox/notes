@@ -1,6 +1,12 @@
 # Quick Notes
 
-## npm版本号
+## IDEA 隐藏文件
+
+```
+Intellij IDEA -> Preferences -> Editor -> File Types -> Ignored Files and Folders
+```
+
+## npm 版本号
 
 `^`符号表示主版本号不变，次版本号和修订号始终最新
 
@@ -19,8 +25,6 @@
 ```bash
 git remote -v
 ```
-
-
 
 ## IDEA 自带 Maven 和 Gradle
 
@@ -45,7 +49,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.6.0_65-b14-462`
 
 最近遇到了一个需求：需要在前端生成多个 PDF，并打包成 zip 包给到用户。
 
-解决方案：使用 `html2pdf` + `JSZip` + `file-saver` 
+解决方案：使用 `html2pdf` + `JSZip` + `file-saver`
 
 ```javascript
 // 核心代码
@@ -78,4 +82,3 @@ server {
 	}
 }
 ```
-

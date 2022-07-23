@@ -172,7 +172,7 @@ type T1 = ReturnType<typeof stringOrNum>;
 
 ## 分发条件类型
 
-当在泛型中使用条件类型的时候，如果传入一个联合类型，就会变成 **分发的（distributive）。**如果我们在 ToArray 传入一个联合类型，这个条件类型会被应用到联合类型的每个成员：
+当在泛型中使用条件类型的时候，如果传入一个联合类型，就会变成 **分发的（distributive）**。 如果我们在 ToArray 传入一个联合类型，这个条件类型会被应用到联合类型的每个成员：
 
 ```typescript
 type ToArray<Type> = Type extends any ? Type[] : never;

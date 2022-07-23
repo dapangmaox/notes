@@ -24,7 +24,7 @@ type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
 
 TypeScript 的一些类型可以用于字符操作，这些类型处于性能的考虑被内置在编译器中，你不能在`.d.ts`文件里找到它们。
 
-### Uppercase<StringType>
+### Uppercase
 
 把每个字符转为大写形式：
 
@@ -38,7 +38,7 @@ type MainID = ASCIICacheKey<'my_app'>;
 // type MainID = "ID-MY_APP"
 ```
 
-### Lowercase<StringType>
+### Lowercase
 
 把每个字符转为小写形式：
 
@@ -52,7 +52,7 @@ type MainID = ASCIICacheKey<'MY_APP'>;
 // type MainID = "id-my_app"
 ```
 
-### Capitalize<StringType>
+### Capitalize<
 
 把字符串的第一个字符转为大写形式：
 
@@ -62,7 +62,7 @@ type Greeting = Capitalize<LowercaseGreeting>;
 // type Greeting = "Hello, world"
 ```
 
-### Uncapitalize<StringType>
+### Uncapitalize
 
 把字符串的第一个字符转换为小写形式：
 
